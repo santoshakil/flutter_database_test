@@ -4,8 +4,6 @@ import 'package:flutter_database_test/database/sqflite/table.dart';
 import 'package:flutter_database_test/providers/counter_sqflite.dart';
 import 'package:provider/provider.dart';
 
-import '../../providers/counter_hive.dart';
-
 class SqfLiteDB {
   static Future<void> write(BuildContext context, int n) async {
     try {
