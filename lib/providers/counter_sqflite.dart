@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/foundation.dart';
 
-class Counter with ChangeNotifier {
+class CounterSqflite with ChangeNotifier {
   int _timerCount = 0;
   int _operationsCount = 0;
   int? _timeTook;

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_database_test/providers/counter_sqflite.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:provider/provider.dart';
 
 import 'database/data/data.dart';
-import 'providers/counter.dart';
+import 'providers/counter_hive.dart';
 import 'screens/home/home.dart';
 
 Future<void> main() async {
@@ -13,7 +14,8 @@ Future<void> main() async {
   runApp(
     MultiProvider(
       providers: [
-        ChangeNotifierProvider<Counter>(create: (_) => Counter()),
+        ChangeNotifierProvider<CounterHive>(create: (_) => CounterHive()),
+        ChangeNotifierProvider<CounterSqflite>(create: (_) => CounterSqflite()),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
